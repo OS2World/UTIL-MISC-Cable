@@ -1,0 +1,36 @@
+Cable 1.1
+===========================================
+This software is released under GPL license.
+
+Cable is a small program written taking portions of code from GenMac utilities samples
+and from XWP. It has been written to allow automatic start of XWLan when the lan cable
+is not connected to your computer. This program will only work with drivers that
+support the appropriate IOCtl calls.
+
+Use is quite simple:
+
+	CABLE DriverName|DeviceNumber [ExeName]
+
+Where DeviceNumber is the number of your LAN card in GenMac drivers (so it does not
+necessarily follow the same order used by OS/2, e.g. 0 is not always lan0).
+On my notebook I use
+
+	cable 0 E:\bin\xwlan\xcenter\wlanstat.exe
+
+You can also specify a driver name e.g. NVETH$ instead of a GenMac device number.
+
+You can omit the ExeName to show current card status: e.g.
+
+	cable 0
+
+might show
+
+	Lan-Number      : lan2
+	LinkSpeed       : 100 [Mbit/s]
+	LinkStatus      : CONNECTED
+
+
+Installation
+------------
+Put cable.exe on your path and execute it from startup.cmd.
+
